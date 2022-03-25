@@ -1,10 +1,10 @@
 .navbar {
-  background-color: #5c5c5c;
+  
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  /* position: sticky; */
   padding: 0 100px;
   top: 0;
   z-index: 1;
@@ -13,7 +13,7 @@
 .navbar h1 {
   margin-left: 15px;
   font-size: 40px;
-  color: white;
+  color: rgb(228, 2, 2);
   font-family: "Metamorphous", cursive;
 }
 

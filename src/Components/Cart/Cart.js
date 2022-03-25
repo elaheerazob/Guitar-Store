@@ -9,7 +9,7 @@ const Cart = (props) => {
     return (
         <div className='card'>
              <h3>Order summary</h3>
-              <p>Selected Items : {name}</p>
+              <p>{name}</p>
               
         </div>
     );
