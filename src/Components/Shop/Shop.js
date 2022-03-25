@@ -8,8 +8,8 @@ const Shop = () => {
     const [show ,setShow] = useState([])
     const bottonAddtoCart = (product) =>{
         // console.log(product);
-        // const newProduct = [...show,product]
-        setShow(product)
+        const newProduct = [...show,product]
+        setShow(newProduct)
     }
     useEffect( () => {
         fetch('products.json')
@@ -25,7 +25,9 @@ const Shop = () => {
                 }
             </div>
             <div className='order-container'>
-                <Cart show={show}></Cart>
+                {
+                  show.map(item => <Cart key={item.id} show={item}></Cart>)  
+                }
             </div>
         </div>
     );
