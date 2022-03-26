@@ -29,6 +29,11 @@ const Shop = () => {
         const removeall =[];
         setShow(removeall);
     }
+    //chooseRendom1Number rendom selection
+    const chooseRendom1Number = () =>{
+        const chooseProduct = show[Math.floor(Math.random() * show.length)];
+        setShow([chooseProduct])
+    }
     //fetch data api call
     useEffect( () => {
         fetch('products.json')
@@ -55,6 +60,7 @@ const Shop = () => {
                   show.map(item => <Cart key={item.id} show={item} remove={remove}></Cart>)  
                 }
                  <button className='buttonRemove' onClick={remove}>RemoveAll</button>
+                 <button className='buttonRemove' onClick={chooseRendom1Number}>Choose 1</button>
             </div>
         </div>
     );

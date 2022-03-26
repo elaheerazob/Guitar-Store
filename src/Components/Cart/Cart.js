@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cart.css'
-
+//select site show 
 const Cart = (props) => {
     console.log(props);
     const {name,img} =props.show;
