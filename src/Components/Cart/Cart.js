@@ -3,13 +3,15 @@ import './Cart.css'
 
 const Cart = (props) => {
     console.log(props);
-    const {name} =props.show;
+    const {name,img} =props.show;
     
     
     return (
         <div className='card'>
-             <h3>Order summary</h3>
-              <p>{name}</p>
+             <div className='show'>
+             <img src={img} alt="" />
+              <p>Name:{name}</p>
+             </div>
               
         </div>
     );

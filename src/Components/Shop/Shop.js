@@ -6,6 +6,7 @@ import './Shop.css'
 const Shop = () => {
     const [products,setProducts] =useState([])
     const [show ,setShow] = useState([])
+    console.log(show);
     const bottonAddtoCart = (product) =>{
         // console.log(product);
         const newProduct = [...show,product]
