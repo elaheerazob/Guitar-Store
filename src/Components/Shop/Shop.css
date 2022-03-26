@@ -8,6 +8,22 @@
     grid-template-columns: repeat(3,1fr);
     gap: 45px;
     margin: 100px 50px;
+    
+}
+.order-container{
+    background: rgb(236, 216, 178);
+    text-align: center;
+}
+.buttonRemove{
+    background: rgb(238, 168, 37);
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.buttonRemove:hover{
+    background: rgb(255, 167, 4);
+    
 }
 
 @media screen and (max-width:576px) {

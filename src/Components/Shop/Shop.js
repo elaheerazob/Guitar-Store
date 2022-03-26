@@ -6,12 +6,30 @@ import './Shop.css'
 const Shop = () => {
     const [products,setProducts] =useState([])
     const [show ,setShow] = useState([])
-    console.log(show);
+    // console.log(show);
+    //click handelar add button function
     const bottonAddtoCart = (product) =>{
         // console.log(product);
-        const newProduct = [...show,product]
-        setShow(newProduct)
+        if(show.indexOf(product) === -1){
+            const newProduct = [...show,product];
+            if(newProduct.length >= 5 ){
+                alert('max number add');
+            }else{
+                // console.log(newProduct);
+                setShow(newProduct)
+            }
+       
+        }else{
+            alert('already taken')
+        }
     }
+
+    //remove all
+    const remove = () =>{
+        const removeall =[];
+        setShow(removeall);
+    }
+    //fetch data api call
     useEffect( () => {
         fetch('products.json')
         .then(res =>res.json())
@@ -34,8 +52,9 @@ const Shop = () => {
             </div>
             <div className='order-container'>
                 {
-                  show.map(item => <Cart key={item.id} show={item}></Cart>)  
+                  show.map(item => <Cart key={item.id} show={item} remove={remove}></Cart>)  
                 }
+                 <button className='buttonRemove' onClick={remove}>RemoveAll</button>
             </div>
         </div>
     );
