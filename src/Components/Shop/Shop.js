@@ -49,7 +49,7 @@ const Shop = () => {
                 }
                 <div>
                     <h4>How to React work?</h4>
-                    <p>Ans: React is the most widely used front-end JavaScript library. It is a component-based, open-source front-end library that is exclusively responsible for the application's view layer. It creates basic views for each state in the project, and when the data changes, React updates and renders the appropriate component quickly</p> <br /> <br />
+                    <p>Ans: React work single direction. Its creat a virtual dom and compare virtual dom between actual dom when change or update.and it works all in one single process, react execute line by line code into down drection</p> <br /> <br />
                     <h4>How usestate work?</h4>
                     <p>Ans : UseState is a Hook that allows to have state variables in functional components. It pass the initial state to this function and it returns a variable with the current state value and another function to update this value.</p>
 
